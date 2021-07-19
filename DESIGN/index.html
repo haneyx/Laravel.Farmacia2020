@@ -1,0 +1,893 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+    <title>SISTEMA</title>
+    <meta name="description" content="STORE">
+    <meta name="author" content="Harold Coila">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+    <style>
+/* Created by: Mg. Sc. Harold Coila */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,800;0,900;1,600;1,900&display=swap');
+* {box-sizing: border-box;}
+html{
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+}
+body{
+	clear:both;
+	width:100%;
+	margin:0;
+	text-align:center;
+	font:normal 11px verdana;
+	background-color: #c0c8cc;
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+	font-family:'Nunito',Tahoma;
+	cursor: default;
+}
+
+.show{
+	clear:both;
+	position:fixed;
+	z-index:3;
+	top:0;
+	width:100%;
+	display:block;
+	border:none;
+	height:100%;
+    background-color:rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(3px);
+}
+.box{
+	width: 380px;
+    margin: 140px auto 0 auto;
+	border-radius: 5px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box .boxtitle{
+	background: linear-gradient(white,#f1f1f1);
+    padding: 5px 0 3px 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #0c6c88;
+    color: #064354;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.show .box .boxframe{
+	background-color: white;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #0e8faa;
+    padding: 11px 15px;
+	overflow: hidden;
+}
+.show .box .boxframe label{
+	clear: both;
+    float: left;
+    text-align: right;
+    width: 22%;
+    height: 30px;
+    padding: 3px;
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #064354;
+}
+.show .box .boxframe em{
+	float: left;
+    width: 78%;
+    text-align: left;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #064354;
+    margin: 2px 0 6px 0;
+    line-height: 21px;
+    padding-left: 8px;
+}
+.show .box .boxframe input[type="text"]{
+	float: left;
+    height: 27px;
+    width: 18%;
+    margin-left: 8px;
+    padding: 0 8px;
+    font-size: 16px;
+	color: #064354;
+    border: 1px solid #9e9e9e;
+    border-radius: 8px;
+	outline: none;
+    background: linear-gradient(white, #fdfdfd);
+}
+.show .box .boxframe input[type="text"]:disabled {
+	background: linear-gradient(white, #fdfdfd);
+	pointer-events:none;
+}
+.show .box .boxframe select{
+	float: left;
+    height: 27px;
+    width: 52%;
+    margin-left: 8px;
+    padding: 0 8px;
+    font-size: 16px;
+	color: #064354;
+    border: 1px solid #9e9e9e;
+    border-radius: 8px;
+	outline: none;
+    background: linear-gradient(white, #fdfdfd);
+}
+.show .box .boxframe .subbox{
+	clear: both;
+    float: left;
+    width: 100%;
+	text-align: left;
+    margin: 0px 0 6px 0px;
+    padding: 6px 8px;
+    font-size: 12px;
+	font-weight: 700;
+    color: black;
+    border: 1px solid #9e9e9e;
+    border-radius: 8px;
+	display: none !important;
+}
+.show .box .boxframe .subbox label{
+	width: 43%;
+    font-size: 12px;
+    color: black;
+    padding-top: 6px;
+    text-transform: uppercase;
+}
+.show .box .boxframe .subbox select{
+	color:black;
+	width: 25%;
+}
+.show .box .boxframe .subbox input{
+	color:black;
+	width: 52%;
+}
+
+.show .box .boxframe option{
+	color: #064354;
+}
+.show .box .boxframe .opt{
+	clear: both;
+    width: 100%;
+    padding: 8px 0;
+}
+.container .frame .opt input[type="text"]{
+    border-radius: 8px 0 0 8px;
+	width: 18%;
+}
+.top{
+    background-image:linear-gradient(white,#FFF,#F3F3F3);
+    height:43px;
+	box-shadow: 0px 2px 4px #0000005e;
+}
+.top .wide{
+    clear:both;
+    margin:0 auto;
+    width:96%;
+    height:44px;
+}
+.top .wide .logo{
+	float:left;
+    background: url(image/hx.png) no-repeat;
+    margin-top:-7px;
+    width:57px;
+    height:97px;
+}
+.top .wide .t{
+	float:left;
+	text-align:center;
+    margin:4px -2px 0 8px;
+    width:120px;
+    height:38px;
+	color:black;
+}
+.top .wide .t .t1{
+    font-size: 11px;
+    font-weight: 700;
+    height: 12px;
+	color:#0e8faa;
+	letter-spacing: 0.4px;
+}
+.top .wide .t .t2{
+	font-size: 17px;
+    font-weight: 700;
+	height: 21px;
+	color:#0e8faa;
+}
+.top .wide .line{
+    float:left;
+    background:#ced6d8;
+    margin:4px 0 0 14px;
+    width:2px;
+    height:33px;
+}
+.top .wide .txtup{
+    float:left;
+    margin:6px 0 0 14px;
+    text-align:left;
+    color:#444;
+    width:240px;
+	font-size: 10px;
+    font-weight: 600;
+	text-transform: uppercase;
+}
+.txtup .tx1{
+	font-size: 13px;
+    font-weight: 600;
+    color: #0b3d48;
+    height: 17px;
+}
+.txtup .tx2{
+	font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.top .wide .menumax{
+	color:black;
+	float:right;
+    min-width:50px;
+	margin:6px 6px 0 0;
+    text-align: center;
+	display: inline-block;
+}
+.top .wide .menumax a button {
+    color: #333;
+    cursor:pointer;
+    text-decoration:none;
+    background-image:linear-gradient(white,#FFF,#f9f9f9);
+    border-bottom:2px solid #f9f9f9;
+    transition-duration: 0.5s;
+}
+.top .wide .menumax a:hover button {
+    color: #0e8faa;
+    background-image:linear-gradient(white,#FFF,#f9f9f9);
+    border-bottom:2px solid #0e8faa;
+}
+.top .wide .menumax button{
+    color: black;
+    text-align:center;
+    height:28px;
+    border-radius:2px;
+    margin-left:4px;
+    font-size:13px;
+    font-weight:700;
+	border: none;
+	transition-duration: 0.7s;
+}
+.top .wide .menumax button:hover{
+	background-color: #ccc; 
+	border:none;
+}
+.top .wide #menubutton{
+    float:right;
+    border:2px solid black;
+    color:black;
+    background-color:white;
+    border-radius:12px;
+    margin:13px 4px 0 0;
+    width:65px;
+    height:25px;
+    font-size:13px;
+    font-weight:500;
+    text-align:center;
+    line-height:5px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+    display:none;
+}
+.top .wide #menubutton:hover{
+	color:#0e8faa;
+	border-color: #0e8faa; 
+}
+.top .wide #menumin{
+	clear:right;
+	color:black;
+	float:right;
+    width:90px;
+	background-color:white;
+	margin:6px 4px 0 0;
+	border-radius:3px;
+    border:2px solid #0e8faa;
+    color:#0e8faa;
+    display:none;
+    position:absolute;
+    right:2%;
+    top:35px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.top .wide #menumin:hover{
+	border-color:#0e8faa;
+}
+.top .wide #menumin a button {
+	width:100%;
+	height:25px;
+    color: black;
+    cursor:pointer;
+    text-decoration:none;
+    border:none;
+    background-color:white;
+    transition-duration: 0.4s;
+	text-decoration:none;
+	font-size:13px;
+    font-weight:700;
+    text-align:center;
+}
+.top .wide #menumin a:hover button {
+    color: white;
+    background-color:#0e8faa;
+}
+.subtop{
+	margin: 0 auto;
+    width: 94%;
+	border-top: 1px solid #afafaf;
+    height: 56px;
+    border-radius: 0 0 10px 10px;
+    background-color: #fbf9f9;
+	box-shadow: 0px 2px 4px #0000005e;
+	border-left: 1px solid #0c6c88;
+	border-right: 1px solid #0c6c88;
+	border-bottom: 1px solid #0c6c88;
+}
+.subtop .notify{
+	width: 99%;
+    margin: 10px auto;
+}
+.subtop .hello{
+	float:left;
+	width: 22%;
+	margin: 10px 0 0 1%;
+	text-align: right;
+}
+.container{
+	clear:both;
+	margin:10px auto 0 auto;
+	width:94%;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mini{
+	width:50%;
+}
+.container .title{
+	margin: 0 auto;
+    background: linear-gradient(white,#ececec);
+    padding: 3px 0 1px 10px;
+    text-align: left;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #0c6c88;
+    color: #0c6c88;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.container .subtitle{
+	text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 7px 0;
+    color: #06495d;
+}
+.container .opt{
+	margin: -8px 0 -10px 9px;
+    overflow: auto;
+}
+.container .opt input{
+	float: left;
+    height: 27px;
+	width: 190px;
+    margin: 5px 0 9px 14px;
+	padding-left: 8px;
+	font-size: 16px;
+	outline: none;
+    border: 1px solid #9e9e9e;
+    border-radius: 8px 0 0 8px;
+    background: linear-gradient(white, #f9f9f9);
+}
+.container .opt button{
+	color: white;
+    float: left;
+    height: 27px;
+    width: 92px;
+	font-size: 14px;
+    margin: 5px 0 9px -1px;
+    border: 1px solid #9e9e9e;
+    border-radius: 0 8px 8px 0;
+    background-color: #1ac9ec;
+}
+.container .frame{
+	background-color: white;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #0e8faa;
+    padding: 0 10px;
+	display: flow-root;
+}
+.container .frame label{ /* Generic */
+	clear: both;
+    float: left;
+    text-align: right;
+    height: 28px;
+    padding: 3px;
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #064354;
+}
+.container .frame input{
+	float: left;
+    height: 27px;
+    margin-left: 8px;
+    padding: 0 8px;
+    font-size: 16px;
+	color: #064354;
+    border: 1px solid #9e9e9e;
+    border-radius: 8px;
+	outline: none;
+    background: linear-gradient(white, #fdfdfd);
+}
+.container .frame  em{
+	float: left;
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    margin: 4px 0 0 6px;
+    color: #064354;
+}
+.container .frame .list1{
+	clear: both;
+    float: left;
+    width: 98%;
+    margin: 17px 1% 0 1%;
+}
+.container .frame .list1 label{
+	width: 15%;
+}
+.container .frame .list1 input{
+	width: 72%;
+}
+.container .frame .list1 input.cut{
+	width: 8%;
+}
+.container .frame .dash{
+	clear: both;
+    float: left;
+    width: 93%;
+    margin: 10px 3%;
+    border: 1px dashed #e6e6e6;
+	border-spacing: 2px;
+}
+.container .frame .list2{
+	float: left;
+    width: 48%;
+    margin: 4px 1% 10px 1%;
+}
+.container .frame .list2 label{
+	width: 64%;
+}
+.container .frame .list2 input{
+	width: 19%;
+}
+.container .frame .list3{
+	float: left;
+    width: 48%;
+    margin: 4px 1% 10px 1%;
+}
+.container .frame .list3 label{
+	width: 26%;
+}
+.container .frame .list3 input{
+	width: 15%;
+}
+.container .frame .rtable{
+	clear: both;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #0e8faa;
+    border-radius: 5px;
+}
+.container .section{
+	clear: both;
+	margin: 8px 0;
+    padding: 2px;
+}
+
+.alert{
+	float: left;
+    margin-left: 1%;
+    width: 72%;
+    display: flex;
+    border-radius: 5px;
+    background: linear-gradient(#00000000,#00000029);
+}
+.alert .colo{
+	font-size: 24px;
+    font-weight: 800;
+    margin: auto;
+    color: white;
+    width: 4%;
+}
+.alert .desc{
+	text-align: left;
+    font-size: 13px;
+    padding: 8px 0 0 8px;
+    background-color: white;
+    width: 91%;
+	border-top:1px solid #00000042;
+	border-bottom:1px solid #00000042;
+}
+.alert #close{
+	font-size: 22px;
+    color: #9a9a9a;
+    font-weight: 500;
+    background-color: white;
+    width: 5%;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+	border-top:1px solid #00000042;
+	border-right:1px solid #00000042;
+	border-bottom:1px solid #00000042;
+	transition: color .2s ease;
+}
+.alert #close:hover{
+	color: black;
+}
+.alert.green{
+	background-color: #25ab25;
+}
+
+button{
+	height: 34px;
+    color: white;
+    cursor: pointer;
+    border: 0;
+	margin-left: 5px;
+    background: linear-gradient(#00000012,#0000003d);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0 13px;
+	letter-spacing: 0.2px;
+	outline: none;
+}
+button:hover{
+	background: linear-gradient(#00000054,#00000054);
+}
+button:disabled{
+	display: none;
+}
+button.red{background-color: red;}
+button.blue{background-color: #00b3d8;}
+button.green{background-color: #05b905;}
+button.gray{background-color: #848383;}
+
+.bottom{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    text-transform: uppercase;
+	box-shadow: 0px 0px 4px #0000005e;
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+    background-image: linear-gradient(#f7f7f7,#FFF,#FFF);
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+}
+tbody{
+	display:block;
+    overflow-x: hidden;
+	height:321px;
+	width: calc(100% + 8px);
+}
+thead,tfoot,tbody tr{
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+tr:hover{
+	background-color:#ffee217a !important;
+}
+th,td {
+	padding: 2px 0;
+	cursor: default;
+}
+td{border:1px solid #b9daeb82;}
+th{
+	text-transform:uppercase;
+	font-weight: 700;
+	font-size: 12px;
+}
+th.i0,td.i0{width: 2%;}th.i0{border-radius: 4px 0 0 0;}td.i0{font-size: 11px;}
+th.i1,td.i1{width: 11%;}td.i1{font-size: 11px;}
+th.i2,td.i2{width: 37%;}td.i2{text-align:left;padding-left:6px;}
+th.i3,td.i3{width: 7%;}
+th.i4,td.i4{width: 5%;}
+th.i5,td.i5{width: 5%;}
+th.i6,td.i6{width: 5%;}
+th.i7,td.i7{width: 7%;}
+th.i8,td.i8{width: 7%;}
+th.i9,td.i9{width: 14%;} th.i9{border-radius: 0 4px 0 0;}
+
+th.ix,td.ix{width: 2%;border-radius: 0 0 0 4px;}
+th.iy,td.iy{width: 98%;text-align: left;padding-left: 1%;border-radius: 0 0 4px 0;}
+tr:nth-child(even) {background-color: #f0f6f7c9;}
+tr:nth-child(odd) {background-color: #f0f6f740;}
+thead tr:first-child {background:linear-gradient(#edfcff,#b6d8ea);}
+tfoot tr:first-child {background:linear-gradient(#d9d9d9,#f9f9f9);}
+
+
+@media only screen and (max-width:835px) {/* ios horizontal*/
+	.top .wide{
+		width:96%;
+	}
+}
+@media only screen and (max-width:660px) {/* MidConvert AppearMENU*/
+	.top .wide .menumax{
+		display:none;
+	}
+	.top .wide #menubutton{
+		display:block;
+	}
+	
+}
+@media only screen and (max-width:500px) {/* Ios & android */
+	.top .wide .menumax{
+		display:none;
+	}
+	.top .wide .txtup {
+		display:none;
+	}
+	.top .wide .line {
+		display:none;
+	}
+	.top .wide #menubutton{
+		display:block;
+	}
+}
+::-webkit-scrollbar{ width: 7px; }
+::-webkit-scrollbar-thumb{
+  background: #03b8de; 
+  border-radius: 100px;
+}
+	</style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<div class="top">
+	<div class="wide">
+		<div class="t">
+			<div class="t1">BOTICA</div>
+			<div class="t2">DON MIGUEL</div>
+		</div>
+		<div class="line"></div>
+		<div class="txtup">
+			<div class="tx1">Bienvenido: Administrador</div>
+			<div class="tx2">Hoy es 20/02/2023</div>
+		</div>
+		<div class="menumax">
+			<a href="#"><button>Inventario</button></a>
+			<a href="#"><button>Reporte</button></a>
+			<a href="#"><button>Ventas</button></a>
+		</div>
+		<button id="menubutton" onclick="open_menu()">Men&uacute;</button>
+		<div id="menumin">
+			<a href="#"><button>Inventario</button></a>
+			<a href="#"><button>Reporte</button></a>
+			<a href="#"><button>Ventas</button></a>
+		</div>
+		
+	</div>
+</div>
+<div class="subtop">
+	<div class="notify">
+		<button class="blue" style="float:left;">Agregar nuevo producto</button>
+		<div class="alert green">
+			<div class="colo">&check;</div>
+			<div class="desc">Se ha agregado el producto: Paracetamol 300 MG. TAB</div>
+			<div id="close" onclick="alert(1)">x</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div id="w1" class="show">
+	<div class="box">
+		<div class="boxtitle">linea de venta</div>
+		<div class="boxframe">
+			<label>Producto:</label><em>Paracetamol 300 MG. TAB para DIABETICO tipo A</em>
+			<label>Cantidad:</label><input type="text" value="20">
+			<label>Precio:</label><input disabled type="text" value="0.2">
+			<div class="opt">
+				<button class="gray">Cancelar</button>
+				<button class="green">Guardar</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- <div id="w2" class="show">
+	<div class="box">
+		<div class="boxtitle">Generaci&oacute;n de venta</div>
+		<div class="boxframe">
+			<label>Formato:</label>
+			<select name="recibo" id="">
+				<option value="0" selected>Boleta electr&oacute;nica</option>
+				<option value="1">Factura electr&oacute;nica</option>
+			</select>
+			<label>Total:</label><em>20.2 soles</em>
+			<div class="subbox">
+				&diams; DATOS DEL CLIENTE
+				<div class="cliente">
+					<label>Tipo de documento:</label>
+					<select name="" id="">
+						<option value="1" selected>DNI</option>
+						<option value="2">RUC</option>
+					</select>
+					<label>N&deg; de documento:</label><input type="text" value="">
+					<label>Nombres:</label><input type="text" value="">
+				</div>
+			</div>
+			<div class="opt">
+				<button class="red">Grabar venta</button>
+				<button class="green" disabled>Generar ticket</button>
+			</div>
+			<button class="gray">Cancelar</button>
+			<button class="gray" disabled>Cerrar</button>
+		</div>
+	</div>
+</div> -->
+
+<!-- <div class="container mini">
+	<div class="title">Registro de nuevo producto</div>
+	<div class="frame">
+		<div class="list1">
+			<label>C&oacute;digo:</label><input type="text" value="">
+			<label>Descripci&oacute;n:</label><input type="text" value="">
+			<label>Contenido:</label><input class="cut" type="text" value=""><em>Unidades</em>
+		</div>
+		<div class="dash"></div>
+		<div class="list2">	
+			<label>Precio unitario de compra:</label><em>S/.</em><input type="text" value="">
+			<label>Precio unitario de venta:</label><em>S/.</em><input type="text" value="">
+			<label>Precio unitario promocional:</label><em>S/.</em><input type="text" value="">
+		</div>
+		<div class="list3">		
+			<label>Stock:</label><input type="text" value=""><em>Unidades</em>
+			<label>Caducidad:</label><input type="text" value=""><em>/</em><input type="text" value="">
+		</div>
+		<div class="section">
+			<button class="gray">Cancelar</button>
+			<button class="green">Agregar</button>
+		</div>
+	</div>
+</div> -->
+
+<div class="container">
+	<div class="title">ATENCION EN VENTAS</div>
+	<div class="frame">
+		<div class="subtitle">&#10148; B&uacute;squeda</div>
+		<div class="opt">
+			<input type="text" value="1234567890123450">
+			<button>Escanear</button>
+			<input type="text" value="Paracetamol">
+			<button>Buscar</button>
+		</div>
+		<div class="rtable">
+		<table>
+			<thead>
+				<tr>
+					<th class="i0">N&deg;</th>
+					<th class="i1">Codigo</th>
+					<th class="i2">Descripci&oacute;n</th>
+					<th class="i3">Contiene</th>
+					<th class="i4">p. unit compra</th>
+					<th class="i5">p. unit venta</th>
+					<th class="i6">p. unit promo</th>
+					<th class="i7">stock</th>
+					<th class="i8">caducidad</th>
+					<th class="i9">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="i0">111</td>
+					<td class="i1">1234567890123450</td>
+					<td class="i2">Paracetamol 300 MG. TAB</td>
+					<td class="i3">100 Unid.</td>
+					<td class="i4">0.6</td>
+					<td class="i5">0.7</td>
+					<td class="i6">0.2</td>
+					<td class="i7">200 Unid.</td>
+					<td class="i8">08/2023</td>
+					<td class="i9">
+						<button class="green">Editar</button>
+						<button class="gray">Eliminar</button>
+					</td>
+				</tr>
+				
+			</tbody>
+			<tfoot>
+				<tr>
+					<th class="ix">100</th>
+					<th class="iy">Productos encontrados en total</th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+
+		<div class="subtitle">&#10148; Venta</div>
+
+		<div class="section">
+			<button class="blue">Imprimir</button>
+			<button class="red">Descargar</button>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="title">Productos</div>
+	<div class="frame">
+		<div class="rtable">
+		<table>
+			<thead>
+				<tr>
+					<th class="i0">N&deg;</th>
+					<th class="i1">Codigo</th>
+					<th class="i2">Descripci&oacute;n</th>
+					<th class="i3">Contiene</th>
+					<th class="i4">p. unit compra</th>
+					<th class="i5">p. unit venta</th>
+					<th class="i6">p. unit promo</th>
+					<th class="i7">stock</th>
+					<th class="i8">caducidad</th>
+					<th class="i9">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="i0">111</td>
+					<td class="i1">1234567890123450</td>
+					<td class="i2">Paracetamol 300 MG. TAB</td>
+					<td class="i3">100 Unid.</td>
+					<td class="i4">0.6</td>
+					<td class="i5">0.7</td>
+					<td class="i6">0.2</td>
+					<td class="i7">200 Unid.</td>
+					<td class="i8">08/2023</td>
+					<td class="i9">
+						<button class="green">Editar</button>
+						<button class="gray">Eliminar</button>
+					</td>
+				</tr>
+				
+			</tbody>
+			<tfoot>
+				<tr>
+					<th class="ix">100</th>
+					<th class="iy">Productos encontrados en total</th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+		<div class="section">
+			<button class="blue">Imprimir</button>
+			<button class="red">Descargar</button>
+		</div>
+	</div>
+</div>
+<div class="bottom">Sistema Integral para boticas y farmacias - Creado por ELNEX INC&reg; - Contacto directo +51 951298007</div>
+</body>
+</html>
