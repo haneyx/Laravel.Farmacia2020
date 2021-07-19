@@ -1,0 +1,16 @@
+tbody{
+	height:240px;
+}
+
+th.i0,td.i0{width: 3%;}th.i0{border-radius: 4px 0 0 0;}td.i0{font-size: 11px;}
+th.i1,td.i1{width: 10%;}
+th.i2,td.i2{width: 33%;}td.i2{text-align:left;padding-left:6px;}
+th.i3,td.i3{width: 13%;}
+th.i4,td.i4{width: 10%;}
+th.i5,td.i5{width: 11%;}td.i5{-webkit-text-security: disc;}
+th.i6,td.i6{width: 20%;}th.i6{border-radius: 0 4px 0 0;}
+
+th.ix,td.ix{width: 3%;border-radius: 0 0 0 4px;}
+th.iy,td.iy{width: 97%;text-align: left;padding-left: 1%;border-radius: 0 0 4px 0;}
+tr:nth-child(even) {background-color: #f0f6f7c9;}
+tr:nth-child(odd) {background-color: #f0f6f740;}

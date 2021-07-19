@@ -1,0 +1,49 @@
+tbody{
+	height:112px; /*84 de 3 filas*/
+}
+tbody input{
+	width:80%;
+	text-align:center;
+	font-size: 17px;
+    font-weight: 600;
+	padding-left:-2px;
+}
+tbody button{
+	margin-left: -5%;
+}
+th.i0,td.i0{width: 3%;}th.i0{border-radius: 4px 0 0 0;}td.i0{font-size: 11px;}
+th.i1,td.i1{width: 61%;}td.i1{text-align:left;padding-left:6px;pointer-events: visible;}
+th.i2,td.i2{width: 8%;}
+th.i3,td.i3{width: 8%;}
+th.i4,td.i4{width: 8%;}
+th.i5,td.i5{width: 12%;}th.i5{border-radius: 0 4px 0 0;}
+
+th.i10,td.i10{width: 3%;}th.i10{border-radius: 4px 0 0 0;}td.i10{font-size: 11px;}
+th.i11,td.i11{width: 69%;}td.i11{text-align:left;padding-left:6px;pointer-events: visible;}
+th.i12,td.i12{width: 8%;}
+th.i13,td.i13{width: 8%;}
+th.i14,td.i14{width: 12%;}th.i14{border-radius: 0 4px 0 0;}
+
+th.ix,td.ix{width: 3%;border-radius: 0 0 0 4px;}
+th.iy,td.iy{width: 97%;text-align:left;border-radius: 0 0 4px 0;}
+
+th.ia,td.ia{width: 3%;border-radius: 0 0 0 4px;}
+th.ib,td.ib{width: 69%;text-align:left;}
+th.ic,td.ic{width: 8%;}
+th.id,td.id{
+	width: 8%;
+	text-align:center;
+	padding-left: 1%;
+	font-weight: 900;
+    font-size: 13px;
+}
+th.ie,td.ie{
+	width: 12%;
+	text-align:center;
+	padding-left: 1%;
+	font-weight: 900;
+    font-size: 13px;
+    border-radius: 0 0 4px 0;
+}
+tr:nth-child(even) {background-color: #f0f6f7c9;}
+tr:nth-child(odd) {background-color: #f0f6f740;}

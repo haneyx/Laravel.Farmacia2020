@@ -1,0 +1,19 @@
+tbody{
+	height:240px;
+}
+
+th.i0,td.i0{width: 2%;}th.i0{border-radius: 4px 0 0 0;}td.i0{font-size: 11px;}
+th.i1,td.i1{width: 11%;}td.i1{font-size: 11px;}
+th.i2,td.i2{width: 37%;}td.i2{text-align:left;padding-left:6px;}
+th.i3,td.i3{width: 7%;}
+th.i4,td.i4{width: 5%;}
+th.i5,td.i5{width: 5%;}
+th.i6,td.i6{width: 5%;}
+th.i7,td.i7{width: 5%;}
+th.i8,td.i8{width: 7%;}
+th.i9,td.i9{width: 16%;} th.i9{border-radius: 0 4px 0 0;}
+
+th.ix,td.ix{width: 2%;border-radius: 0 0 0 4px;}
+th.iy,td.iy{width: 98%;text-align: left;padding-left: 1%;border-radius: 0 0 4px 0;}
+tr:nth-child(even) {background-color: #f0f6f7c9;}
+tr:nth-child(odd) {background-color: #f0f6f740;}
